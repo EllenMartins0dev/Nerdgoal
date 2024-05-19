@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-white" style="position: fixed; top: 0; width: 100%; z-index: 999;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" width="70vh">Nerdgoal</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="cadastro.html">Cadastro</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Produtos
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="produtos.html#roupas">Roupas</a></li>
+                    <li><a class="dropdown-item" href="produtos.html#pelucias">Pelúcias</a></li>
+                    <li><a class="dropdown-item" href="produtos.html#figures">Figures</a></li>
+                    <li><a class="dropdown-item" href="produtos.html#cozinha">Cozinha</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search" style="width: 50%;">
+              <input class="form-control me-2" type="search" placeholder="O que deseja?" aria-label="Search">
+              <button class="btn btn-outline-warning" type="submit">Pesquisar</button>
+            </form>
+            <a href="#" class="cart-icon" onclick="toggleCart()">
+              <img src="img/carrinho-de-compras.png" alt="Carrinho de Compras" style="width: 6vh; margin-left: 20%;">
+              <span id="cart-count" class="badge badge-warning">0</span>
+          </a>
+          </div>
+        </div>
+      </nav>
+      <br><br>
+
+      <div class="form-page">
+        <div class="form-container">
+            <div class="header">
+                <img src="img/logo.png" alt="Nerdgoal Logo">
+                <h2>Cadastre-se</h2>
+                <p>Junte-se à comunidade geek!</p>
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+                </div>
+                <div class="mb-3">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input type="text" class="form-control" id="cpf" placeholder="Seu CPF" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Seu email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="senha" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="senha" placeholder="Senha" required>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-warning">Cadastrar</button>
+                </div>
+                <hr>
+                <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-google">Cadastrar com Google</button>
+                    <button type="button" class="btn btn-facebook">Cadastrar com Facebook</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+          <h5>Carrinho de Compras</h5>
+          <button class="close-btn" onclick="toggleCart()">×</button>
+      </div>
+      <div id="cart-items" class="cart-items">
+          <p>Nada foi encontrado</p>
+      </div>
+      <div class="cart-footer">
+          <button class="btn btn-danger" onclick="clearCart()">Limpar</button>
+          <button class="btn btn-success" onclick="finalizePurchase()">Finalizar Compra</button>
+      </div>
+  </div>
+
+  <br><br><br>
+
+      <br><br>
+      <footer class="footer text-white py-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 d-flex align-items-center">
+                    <img src="img/logo.png" alt="Logo" class="footer-logo" style="width: 12vh;">
+                    <p class="mb-0 ms-3">Rua Boa Morte, 139<br>Piracicaba - SP</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="mb-0" style="margin-top: 2%;">&copy; 2024 Nerdgoal. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-4 text-end footer-icons">
+                    <a href="https://www.instagram.com/nerdgoal" class="text-white me-3" target="_blank">
+                        <img src="img/icon_insta.png" alt="Instagram" class="footer-icon insta-icon">
+                    </a>
+                    <a href="https://wa.me/seuNumeroDeTelefone" class="text-white me-3" target="_blank">
+                        <img src="img/icon_wpp.png" alt="WhatsApp" class="footer-icon wpp-icon">
+                    </a>
+                    <a href="mailto:nerdgoal@gmail.com" class="text-white me-3">
+                        <img src="img/icon_email.png" alt="Email" class="footer-icon email-icon">
+                    </a>
+                    <a href="https://www.facebook.com/seuPerfil" class="text-white" target="_blank">
+                        <img src="img/icon_face.png" alt="Facebook" class="footer-icon face-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/carrinho_compras.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

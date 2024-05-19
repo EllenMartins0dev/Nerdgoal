@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerdgoal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-white" style="position: fixed; top: 0; width: 100%; z-index: 999;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" width="70vh">Nerdgoal</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cadastro.html">Cadastro</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Produtos
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="produtos.html#roupas">Roupas</a></li>
+                    <li><a class="dropdown-item" href="produtos.html#pelucias">Pelúcias</a></li>
+                    <li><a class="dropdown-item" href="produtos.html#figures">Figures</a></li>
+                    <li><a class="dropdown-item" href="produtos.html#cozinha">Cozinha</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search" style="width: 50%;">
+              <input class="form-control me-2" type="search" placeholder="O que deseja?" aria-label="Search">
+              <button class="btn btn-outline-warning" type="submit">Pesquisar</button>
+            </form>
+            <a href="#" class="cart-icon" onclick="toggleCart()">
+              <img src="img/carrinho-de-compras.png" alt="Carrinho de Compras" style="width: 6vh; margin-left: 20%;">
+              <span id="cart-count" class="badge badge-warning">0</span>
+          </a>
+          </div>
+        </div>
+      </nav>
+      <div class="banner">
+         <div class="banner">
+            <img src="img/banner_nerdgoal_novo.png" alt="Banner" class="img-fluid">
+      </div>
+      <br><br>
+
+      <div class="product-container">
+        <div class="big-image product-item">
+            <a href="produtos.html#roupas">
+                <img src="img/dem_camiseta.png" alt="Produto 1">
+            </a>
+        </div>
+        <div class="small-images-container">
+            <div class="small-image product-item">
+                <a href="produtos.html#figures">
+                    <img src="img/dem_figures.png" alt="Produto 2">
+                </a>
+            </div>
+            <div class="small-image product-item">
+                <a href="produtos.html#roupas">
+                    <img src="img/dem_bone.png" alt="Produto 3">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+          <h5>Carrinho de Compras</h5>
+          <button class="close-btn" onclick="toggleCart()">×</button>
+      </div>
+      <div id="cart-items" class="cart-items">
+          <p>Nada foi encontrado</p>
+      </div>
+      <div class="cart-footer">
+          <button class="btn btn-danger" onclick="clearCart()">Limpar</button>
+          <button class="btn btn-success" onclick="finalizePurchase()">Finalizar Compra</button>
+      </div>
+  </div>
+  <br><br><br>
+
+  <section id="fale-conosco" class="my-5 text-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <form id="form-reclamacao">
+                    <h2 class="mb-4">Fale Conosco</h2>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="Seu endereço de e-mail" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" id="reclamacao" rows="5" placeholder="Descreva sua reclamação" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <button type="button" class="btn btn-danger btn-lg me-2" onclick="limparFormulario()"><i class="fas fa-times me-1"></i>Cancelar</button>
+                        <button type="submit" class="btn btn-success btn-lg"><i class="fas fa-paper-plane me-1"></i>Enviar</button>
+                    </div>
+                    <div id="mensagem-sucesso" class="alert alert-success d-none" role="alert">
+                        <i class="fas fa-check-circle me-1"></i>Sua sugestão/crítica foi enviada com sucesso! Obrigado pelo seu feedback.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        
+  
+      <footer class="footer text-white py-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 d-flex align-items-center">
+                    <img src="img/logo.png" alt="Logo" class="footer-logo" style="width: 12vh;">
+                    <p class="mb-0 ms-3">Rua Boa Morte, 139<br>Piracicaba - SP</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="mb-0" style="margin-top: 2%;">&copy; 2024 Nerdgoal. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-4 text-end footer-icons">
+                    <a href="https://www.instagram.com/nerdgoal" class="text-white me-3" target="_blank">
+                        <img src="img/icon_insta.png" alt="Instagram" class="footer-icon insta-icon">
+                    </a>
+                    <a href="https://wa.me/seuNumeroDeTelefone" class="text-white me-3" target="_blank">
+                        <img src="img/icon_wpp.png" alt="WhatsApp" class="footer-icon wpp-icon">
+                    </a>
+                    <a href="mailto:nerdgoal@gmail.com" class="text-white me-3">
+                        <img src="img/icon_email.png" alt="Email" class="footer-icon email-icon">
+                    </a>
+                    <a href="https://www.facebook.com/seuPerfil" class="text-white" target="_blank">
+                        <img src="img/icon_face.png" alt="Facebook" class="footer-icon face-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  
+    <script src="js/carrinho_compras.js"></script>  
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+    document.getElementById('form-reclamacao').addEventListener('submit', function (event) {
+        event.preventDefault();
+        document.getElementById('mensagem-sucesso').classList.remove('d-none');
+        setTimeout(function () {
+            document.getElementById('mensagem-sucesso').classList.add('d-none');
+        }, 5000);
+        document.getElementById('form-reclamacao').reset();
+    });
+
+    function limparFormulario() {
+        document.getElementById('form-reclamacao').reset();
+    }
+    </script>
+</body>
+</html>

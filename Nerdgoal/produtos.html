@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-white" style="position: fixed; top: 0; width: 100%; z-index: 999;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" width="70vh">Nerdgoal</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cadastro.html">Cadastro</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Produtos
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#roupas">Roupas</a></li>
+                  <li><a class="dropdown-item" href="#pelucias">Pelúcias</a></li>
+                  <li><a class="dropdown-item" href="#figures">Figures</a></li>
+                  <li><a class="dropdown-item" href="#cozinha">Cozinha</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search" style="width: 50%;">
+              <input class="form-control me-2" type="search" placeholder="O que deseja?" aria-label="Search">
+              <button class="btn btn-outline-warning" type="submit">Pesquisar</button>
+            </form>
+            <a href="#" class="cart-icon" onclick="toggleCart()">
+              <img src="img/carrinho-de-compras.png" alt="Carrinho de Compras" style="width: 6vh; margin-left: 20%;">
+              <span id="cart-count" class="badge badge-warning">0</span>
+          </a>
+          </div>
+        </div>
+      </nav>
+      <br><br><br><br>
+
+      <div class="container">
+        <!-- Seção de Roupas -->
+        <section id="roupas" class="my-5">
+            <h2>Roupas</h2>
+            <div class="row">
+                <!-- Card de produto 1 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="img/prod_camiseta1.jpeg" class="card-img-top" alt="camiseta1">
+                        <div class="card-body">
+                            <h5 class="card-title">Camiseta Super Choque</h5>
+                            <p class="card-text">Vista-se com o poder da eletricidade! Esta camiseta do "Super Choque" é perfeita para qualquer fã do herói. Disponível nos tamanhos P, M e G para que você possa combater o crime com estilo.</p>
+                            <a href="#" class="btn btn-warning">Comprar agora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card de produto 2 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="img/prod_camiseta2.jpeg" class="card-img-top" alt="camiseta2">
+                        <div class="card-body">
+                            <h5 class="card-title">Camiseta Senhor dos Anéis</h5>
+                            <p class="card-text">Prepare-se para uma jornada épica pela Terra Média com esta camiseta do "Senhor dos Anéis". Confortável e estilosa, ela está disponível nos tamanhos P, M e G para todos os aventureiros.</p>
+                            <a href="#" class="btn btn-warning">Comprar agora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card de produto 3 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="img/prod_camiseta3.jpeg" class="card-img-top" alt="camiseta3">
+                        <div class="card-body">
+                            <h5 class="card-title">Camiseta The Last Of Us</h5>
+                            <p class="card-text">Entre no mundo pós-apocalíptico de "The Last Of Us" com esta camiseta incrível. Perfeita para sobreviventes de todas as idades, disponível nos tamanhos P, M e G.</p>
+                            <a href="#" class="btn btn-warning">Comprar agora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card de produto 4 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="img/prod_bone.jpeg" class="card-img-top" alt="boné">
+                        <div class="card-body">
+                            <h5 class="card-title">Boné Trucker - Resident Evil</h5>
+                            <p class="card-text">Proteja-se dos zumbis com estilo com este boné do "Resident Evil". Perfeito para qualquer sobrevivente do apocalipse.</p>
+                            <a href="#" class="btn btn-warning">Comprar agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Seção de Pelúcias -->
+        <section id="pelucias" class="my-5">
+            <h2>Pelúcias</h2>
+            <div class="row">
+                <!-- Card de produto 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="img/prod_pelucia1.jpeg" class="card-img-top" alt="pelucia1">
+                        <div class="card-body">
+                            <h5 class="card-title">Pochita</h5>
+                            <p class="card-text">Adote o adorável Pochita do anime "Chainsaw Man". Perfeito para abraços e batalhas contra demônios.</p>
+                            <a href="#" class="btn btn-warning">Comprar agora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card de produto 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="img/prod_pelucia2.jpeg" class="card-img-top" alt="pelucia2">
+                        <div class="card-body">
+                            <h5 class="card-title">Pokémon Surpresa</h5>
+                            <p class="card-text">Descubra qual Pokémon você vai pegar com esta pelúcia surpresa! Perfeito para treinadores de todas as idades.</p>
+                            <a href="#" class="btn btn-warning">Comprar agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Seção de Figures -->
+        <section id="figures" class="my-5">
+            <h2>Figures</h2>
+            <div class="row">
+                <!-- Card de produto 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="img/prod_figure1.jpeg" class="card-img-top" alt="figure1">
+                        <div class="card-body">
+                            <h5 class="card-title">Doflamingo</h5>
+                            <p class="card-text">Adicione o vilão carismático Doflamingo do anime "One Piece" à sua coleção. Disponível para todos os fãs dos Piratas do Chapéu de Palha.</p>
+                            <a href="#" class="btn btn-warning">Comprar agora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card de produto 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="img/prod_figure2.jpeg" class="card-img-top" alt="figure2">
+                        <div class="card-body">
+                            <h5 class="card-title">Luffy Gear 5</h5>
+                            <p class="card-text">Aventure-se no Novo Mundo com Luffy em Gear 5, diretamente do anime "One Piece". Disponível para todos os futuros Reis dos Piratas.</p>
+                            <a href="#" class="btn btn-warning">Comprar agora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card de produto 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="img/prod_figure3.jpeg" class="card-img-top" alt="figure3">
+                        <div class="card-body">
+                            <h5 class="card-title">Batman</h5>
+                            <p class="card-text">Proteja Gotham com o icônico Batman. Esta figure detalhada é um item obrigatório para todos os fãs do Cavaleiro das Trevas.</p>
+                            <a href="#" class="btn btn-warning">Comprar agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Seção de Cozinha -->
+        <section id="cozinha" class="my-5">
+            <h2>Cozinha</h2>
+            <div class="row">
+                <!-- Card de produto 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="img/prod_caneca1.jpeg" class="card-img-top" alt="caneca">
+                        <div class="card-body">
+                            <h5 class="card-title">Caneca Omni-Man</h5>
+                            <p class="card-text">Desfrute do seu café matinal com a força de Omni-Man do anime "Invincible". Ideal para super-heróis e vilões.</p>
+                            <a href="#" class="btn btn-warning">Comprar agora</a>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+          <h5>Carrinho de Compras</h5>
+          <button class="close-btn" onclick="toggleCart()">×</button>
+      </div>
+      <div id="cart-items" class="cart-items">
+          <p>Nada foi encontrado</p>
+      </div>
+      <div class="cart-footer">
+          <button class="btn btn-danger" onclick="clearCart()">Limpar</button>
+          <button class="btn btn-success" onclick="finalizePurchase()">Finalizar Compra</button>
+      </div>
+  </div>
+
+
+      <br><br>
+      <footer class="footer text-white py-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 d-flex align-items-center">
+                    <img src="img/logo.png" alt="Logo" class="footer-logo" style="width: 12vh;">
+                    <p class="mb-0 ms-3">Rua Boa Morte, 139<br>Piracicaba - SP</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="mb-0" style="margin-top: 2%;">&copy; 2024 Nerdgoal. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-4 text-end footer-icons">
+                    <a href="https://www.instagram.com/nerdgoal" class="text-white me-3" target="_blank">
+                        <img src="img/icon_insta.png" alt="Instagram" class="footer-icon insta-icon">
+                    </a>
+                    <a href="https://wa.me/seuNumeroDeTelefone" class="text-white me-3" target="_blank">
+                        <img src="img/icon_wpp.png" alt="WhatsApp" class="footer-icon wpp-icon">
+                    </a>
+                    <a href="mailto:nerdgoal@gmail.com" class="text-white me-3">
+                        <img src="img/icon_email.png" alt="Email" class="footer-icon email-icon">
+                    </a>
+                    <a href="https://www.facebook.com/seuPerfil" class="text-white" target="_blank">
+                        <img src="img/icon_face.png" alt="Facebook" class="footer-icon face-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/rolagem_suave.js"></script>
+    <script src="js/carrinho_compras.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
