@@ -7,6 +7,10 @@
     color: white;
 }
 
+::placeholder {
+    color: rgb(122, 122, 122) !important;
+}
+
 
 /* INDEX */
 .navbar {
@@ -40,16 +44,96 @@
     color: #fff !important; 
 }
 
+
+.btn-outline-warning:hover {
+    color: rgb(177, 130, 12)!important; 
+}
+
+
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1) !important; 
+
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
+}
+
 .banner {
     width: 100%;
-    height: auto;
+    height: 90vh; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
     overflow: hidden;
+    margin-top: -3%;
 }
 
 .banner img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: auto; 
+    max-height: 100%; 
+    object-fit: cover; 
+    object-position: center; 
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.carousel {
+    width: 25%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none; 
+}
+
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+    content: '\2039'; 
+    font-size: 30px;
+    color: rgb(255, 255, 255) !important; 
+}
+
+.carousel-control-next-icon::after {
+    content: '\203A'; 
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5%; 
+    background-color: transparent !important;
+    border: none !important; 
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    outline: none;
+    box-shadow: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background: none;
+    font-size: 2rem;
+}
+
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+    content: '';
 }
 
 .product-container {
@@ -102,6 +186,28 @@
     }
 }
 
+@media (max-width: 768px) {
+    .banner {
+        height: 60vh; 
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 40vh; 
+        margin-top: 5%;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto; 
+        object-fit: contain; 
+        object-position: center; 
+    }
+}
+
+
 /* Formulário de "Fale Conosco" */
 #fale-conosco {
     padding: 50px 0; 
@@ -122,11 +228,6 @@
 #mensagem-sucesso {
     margin-top: 20px; 
 }
-
-
-
-
-
 
 .footer {
     color: white;
@@ -163,7 +264,7 @@
 }
 
 .footer .footer-icon {
-    width: 8vh; 
+    width: 6vh; 
 }
 
 @media (max-width: 1486px) {
@@ -236,14 +337,35 @@ html, body {
     margin-bottom: 1rem;
 }
 
-.btn-google {
-    background-color: #db4437;
-    color: #fff;
+.btn-login a {
+    color: rgb(122, 122, 122);
+    text-decoration: none !important;
 }
 
-.btn-facebook {
-    background-color: #3b5998;
-    color: #fff;
+.btn-login :hover{
+    color: rgb(219, 218, 218);
+    transition: 0.5s;
+    
+}
+
+.btn-google a {
+    color: rgb(122, 122, 122) !important;
+    text-decoration: none ;
+}
+
+.btn-google :hover{
+    color: #db4437 !important;
+    transition: 0.5s;
+    
+}
+
+
+.btn-warning {
+    color: rgb(218, 165, 32)!important; 
+}
+
+.btn-warning:hover {
+    color: rgb(218, 165, 32)!important; 
 }
 
 .header {
@@ -272,6 +394,83 @@ html, body {
         padding: 0.75rem;
     }
 }
+
+
+/* LOGIN */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0); 
+    padding: 2rem;
+    width: 90%;
+    max-width: 90vh;
+}
+
+.form-page {
+    background: url('../img/pacman.gif') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.form-control, .btn {
+    border-radius: 30px;
+    margin-bottom: 1rem;
+}
+
+.btn-google a {
+    color: rgb(41, 41, 41);
+    text-decoration: none !important;
+}
+
+.btn-google:hover {
+    color: #db4437;
+    transition: 0.5s;
+}
+
+.btn-warning {
+    color: rgb(218, 165, 32)!important; 
+}
+
+.btn-warning:hover {
+    color: rgb(218, 165, 32)!important; 
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    width: 10%;
+}
+
+@media (max-width: 576px) {
+    .header img {
+        width: 20%;
+    }
+
+    .form-container {
+        padding: 1.5rem;
+    }
+
+    .form-control, .btn {
+        margin-bottom: 0.8rem;
+    }
+
+    .btn {
+        padding: 0.75rem;
+    }
+}
+
 
 /* PRODUTOS */
 .card-body h5 {

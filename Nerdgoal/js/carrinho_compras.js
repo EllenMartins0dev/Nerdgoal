@@ -58,7 +58,7 @@ let cart = [];
             event.preventDefault();
             const productCard = event.target.closest('.card-body');
             const title = productCard.querySelector('.card-title').innerText;
-            const size = 'M'; // Assume o tamanho padrão como M ou personalize de acordo
+            const size = 'M'; 
             addToCart({ title, size });
         });
     });
