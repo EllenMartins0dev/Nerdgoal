@@ -1,94 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-white" style="position: fixed; top: 0; width: 100%; z-index: 999;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" width="70vh">Nerdgoal</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Início</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="cadastro.html">Cadastro</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Produtos
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="produtos.html#roupas">Roupas</a></li>
-                    <li><a class="dropdown-item" href="produtos.html#pelucias">Pelúcias</a></li>
-                    <li><a class="dropdown-item" href="produtos.html#figures">Figures</a></li>
-                    <li><a class="dropdown-item" href="produtos.html#cozinha">Cozinha</a></li>
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" width="70vh">Nerdgoal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Produtos</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="produtos.html#pelucias">Pelúcias</a></li>
+                            <li><a class="dropdown-item" href="produtos.html#figures">Figures</a></li>
+                            <li><a class="dropdown-item" href="produtos.html#bustos">Bustos/Réplicas</a></li>
+                        </ul>
+                    </li>
                 </ul>
-              </li>
-            </ul>
-            <form class="d-flex" role="search" style="width: 50%; margin-top: 1%;">
-              <input class="form-control me-2" type="search" placeholder="O que você está procurando?" aria-label="Search">
-              <button class="btn btn-outline-warning" type="submit">Pesquisar</button>
+            </div>
+            <form class="d-flex flex-grow-1 mx-2" role="search">
+                <input class="form-control me-2 flex-grow-1" type="search" placeholder="O que deseja?"
+                    aria-label="Search">
+                <button class="btn btn-outline-warning" type="submit"><img src="img/lupa.png" alt="lupa" width="20"
+                        height="20"></button>
             </form>
-            <a href="#" class="cart-icon" onclick="toggleCart()">
-              <img src="img/carrinho-de-compras.png" alt="Carrinho de Compras" style="width: 4vh; margin-left: 25%">
-              <span id="cart-count" class="badge badge-warning">0</span>
-          </a>
-          </div>
-        </div>
-      </nav>
-      <br><br>
+            <div class="d-flex">
+                <div class="btn-group mx-1">
+                    <button class="btn btn-outline-warning dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="img/perfil-de-usuario.png" alt="Login" width="20" height="20">
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="cadastro.html">Cadastro/Login</a></li>
 
-    <div class="form-page">
+                    </ul>
+                </div>
+                <button class="btn btn-outline-warning mx-1" id="cartButton">
+                    <a href="#" class="cart-icon" onclick="toggleCart()">
+                        <img src="img/carrinho-de-compras.png" alt="Carrinho de Compras" width="20" height="20">
+                        <span id="cart-count">0</span>
+                    </a>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <br><br> 
+
+    <div class="form-page-login">
         <div class="form-container">
             <div class="header">
-                <img src="img/logo.png" alt="Nerdgoal Logo">
+                <img src="img/logo.png" alt="Nerdgoal Logo" width="70">
                 <h2>Login</h2>
-                <p>Acesse sua conta</p>
+                <p>Entre com seus dados</p>
             </div>
-            <form>
+            <form id="loginForm">
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Seu email" required>
+                    <label for="username" class="form-label">Usuário</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Seu usuário" required>
                 </div>
                 <div class="mb-3">
-                    <label for="senha" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="senha" placeholder="Senha" required>
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Sua senha" required>
                 </div>
                 <div class="d-grid gap-2">
                     <button type="submit" class="btn btn-warning">Entrar</button>
                 </div>
+                <div id="successMessage" class="text-success d-none" style="text-align: center; margin-top: 10px;"></div>   
                 <hr>
+                <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-senha"><a href="redefinirSenha.html">Esqueci minha senha</a></button>
+                </div>
                 <div class="d-grid gap-2">
                     <button type="button" class="btn btn-google"><a href="https://accounts.google.com/v3/signin/identifier?hl=pt-br&ifkv=AS5LTAQ1HB2nkMq2fw3Cmk2WYtpUeuIXAV1Tcl7XIG38k7419Vxeao9-dVnqzgczW16-TwwOEjcHcg&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S589989616%3A1717531450738817&ddm=0">Login com Google</a></button>
                 </div>
             </form>
         </div>
     </div>
-
-    <div id="cart-sidebar" class="cart-sidebar">
-        <div class="cart-header">
-            <h5>Carrinho de Compras</h5>
-            <button class="close-btn" onclick="toggleCart()">×</button>
-        </div>
-        <div id="cart-items" class="cart-items">
-            <p>Nada foi encontrado</p>
-        </div>
-        <div class="cart-footer">
-            <button class="btn btn-danger" onclick="clearCart()">Limpar</button>
-            <button class="btn btn-success" onclick="finalizePurchase()">Finalizar Compra</button>
-        </div>
-    </div>
-
-    <br><br><br>
+    
     <div class="sobre-nos">
         <br>
         <h2>Explore o universo geek com os melhores produtos da Nerdgoal!</h2>
@@ -108,6 +111,7 @@
             <i class="fab fa-cc-elo"></i>
         </div>
     </div>
+
     <footer class="footer text-white py-4">
         <div class="container-fluid">
             <div class="row">
@@ -135,8 +139,28 @@
             </div>
         </div>
     </footer>
-    
-    <script src="js/carrinho_compras.js"></script>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (this.checkValidity()) {
+                const successMessage = document.getElementById('successMessage');
+                successMessage.textContent = `Login efetuado com sucesso, ${username}.`;
+                successMessage.classList.remove('d-none'); 
+                setTimeout(function() {
+                    successMessage.classList.add('d-none');
+                }, 2000);
+                this.reset();
+            } else {
+                this.reportValidity();
+            }
+        });
+    </script>
+
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/inputs.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -5,47 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nerdgoal</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-white" style="position: fixed; top: 0; width: 100%; z-index: 999;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" width="70vh">Nerdgoal</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Início</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="cadastro.html">Cadastro</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Produtos
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="produtos.html#roupas">Roupas</a></li>
-                    <li><a class="dropdown-item" href="produtos.html#pelucias">Pelúcias</a></li>
-                    <li><a class="dropdown-item" href="produtos.html#figures">Figures</a></li>
-                    <li><a class="dropdown-item" href="produtos.html#cozinha">Cozinha</a></li>
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" width="70vh">Nerdgoal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Produtos</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="produtos.html#pelucias">Pelúcias</a></li>
+                            <li><a class="dropdown-item" href="produtos.html#figures">Figures</a></li>
+                            <li><a class="dropdown-item" href="produtos.html#bustos">Bustos/Réplicas</a></li>
+                        </ul>
+                    </li>
                 </ul>
-              </li>
-            </ul>
-            <form class="d-flex" role="search" style="width: 50%; margin-top: 1%;">
-              <input class="form-control me-2" type="search" placeholder="O que você está procurando?" aria-label="Search">
-              <button class="btn btn-outline-warning" type="submit">Pesquisar</button>
+
+            </div>
+            <form class="d-flex flex-grow-1 mx-2" role="search">
+                <input class="form-control me-2 flex-grow-1" type="search" placeholder="O que deseja?"
+                    aria-label="Search">
+                <button class="btn btn-outline-warning" type="submit"><img src="img/lupa.png" alt="lupa" width="20"
+                        height="20"></button>
             </form>
-            <a href="#" class="cart-icon" onclick="toggleCart()">
-              <img src="img/carrinho-de-compras.png" alt="Carrinho de Compras" style="width: 4vh; margin-left: 25%">
-              <span id="cart-count" class="badge badge-warning">0</span>
-          </a>
-          </div>
+            <div class="d-flex">
+                <div class="btn-group mx-1">
+                    <button class="btn btn-outline-warning dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="img/perfil-de-usuario.png" alt="Login" width="20" height="20">
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="cadastro.html">Cadastro/Login</a></li>
+                    </ul>
+                </div>
+                <button class="btn btn-outline-warning mx-1" id="cartButton">
+                    <a href="#" class="cart-icon" onclick="toggleCart()">
+                        <img src="img/carrinho-de-compras.png" alt="Carrinho de Compras" width="20" height="20">
+                        <span id="cart-count">0</span>
+                    </a>
+                </button>
+
+            </div>
         </div>
-      </nav>
+    </nav>
+    <br>
       <div class="banner">
         <a href="produtos.html#figures"><img src="img/banner_nerdgoal.png" alt="banner"></a>
     </div>
@@ -192,18 +209,21 @@
     </div>
 
     <div id="cart-sidebar" class="cart-sidebar">
-      <div class="cart-header">
-          <h5>Carrinho de Compras</h5>
-          <button class="close-btn" onclick="toggleCart()">×</button>
-      </div>
-      <div id="cart-items" class="cart-items">
-          <p>Nada foi encontrado</p>
-      </div>
-      <div class="cart-footer">
-          <button class="btn btn-danger" onclick="clearCart()">Limpar</button>
-          <button class="btn btn-success" onclick="finalizePurchase()">Finalizar Compra</button>
-      </div>
-  </div>
+        <div class="cart-header">
+            <h5>Carrinho de Compras</h5>
+            <button class="close-btn" onclick="toggleCart()">×</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <p>Nada foi encontrado</p>
+        </div>
+        <div class="cart-footer">
+            <p id="cart-total">Total: R$ 0,00</p>
+            <div class="button-group">
+                <button class="btn btn-danger" onclick="clearCart()">Limpar</button>
+                <button class="btn btn-success" onclick="finalizePurchase()">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
   <br><br><br>
 
   <section id="fale-conosco" class="my-5 text-center">
@@ -279,6 +299,7 @@
   
     <script src="js/carrinho_compras.js"></script>  
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/inputs.js"></script>  
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
      <!-- Fale conosco -->
 <script>

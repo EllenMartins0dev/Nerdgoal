@@ -1,216 +1,1457 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/produtos.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg bg-body-white" style="position: fixed; top: 0; width: 100%; z-index: 999;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" width="70vh">Nerdgoal</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Início</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="cadastro.html">Cadastro</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Produtos
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="produtos.html#roupas">Roupas</a></li>
-                    <li><a class="dropdown-item" href="produtos.html#pelucias">Pelúcias</a></li>
-                    <li><a class="dropdown-item" href="produtos.html#figures">Figures</a></li>
-                    <li><a class="dropdown-item" href="produtos.html#cozinha">Cozinha</a></li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex" role="search" style="width: 50%; margin-top: 1%;">
-              <input class="form-control me-2" type="search" placeholder="O que você está procurando?" aria-label="Search">
-              <button class="btn btn-outline-warning" type="submit">Pesquisar</button>
-            </form>
-            <a href="#" class="cart-icon" onclick="toggleCart()">
-              <img src="img/carrinho-de-compras.png" alt="Carrinho de Compras" style="width: 4vh; margin-left: 25%">
-              <span id="cart-count" class="badge badge-warning">0</span>
-          </a>
-          </div>
-        </div>
-      </nav>
-      <br><br><br><br>
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" width="70vh">Nerdgoal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html">Início</a>
+                    </li>
 
-      <div class="container">
-        <!-- Seção de Roupas -->
-        <section id="roupas" class="my-5">
-            <h2>Roupas</h2>
-            <div class="row">
-                <!-- Card de produto 1 -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img src="img/prod_camiseta1.jpeg" class="card-img-top" alt="camiseta1">
-                        <div class="card-body">
-                            <h5 class="card-title">Camiseta Super Choque</h5>
-                            <p class="card-text">Vista-se com o poder da eletricidade! Esta camiseta do "Super Choque" é perfeita para qualquer fã do herói. Disponível nos tamanhos P, M e G para que você possa combater o crime com estilo.</p>
-                            <a href="#" class="btn btn-warning">Comprar agora</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card de produto 2 -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img src="img/prod_camiseta2.jpeg" class="card-img-top" alt="camiseta2">
-                        <div class="card-body">
-                            <h5 class="card-title">Camiseta Senhor dos Anéis</h5>
-                            <p class="card-text">Prepare-se para uma jornada épica pela Terra Média com esta camiseta do "Senhor dos Anéis". Confortável e estilosa, ela está disponível nos tamanhos P, M e G para todos os aventureiros.</p>
-                            <a href="#" class="btn btn-warning">Comprar agora</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card de produto 3 -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img src="img/prod_camiseta3.jpeg" class="card-img-top" alt="camiseta3">
-                        <div class="card-body">
-                            <h5 class="card-title">Camiseta The Last Of Us</h5>
-                            <p class="card-text">Entre no mundo pós-apocalíptico de "The Last Of Us" com esta camiseta incrível. Perfeita para sobreviventes de todas as idades, disponível nos tamanhos P, M e G.</p>
-                            <a href="#" class="btn btn-warning">Comprar agora</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card de produto 4 -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img src="img/prod_bone.jpeg" class="card-img-top" alt="boné">
-                        <div class="card-body">
-                            <h5 class="card-title">Boné Trucker - Resident Evil</h5>
-                            <p class="card-text">Proteja-se dos zumbis com estilo com este boné do "Resident Evil". Perfeito para qualquer sobrevivente do apocalipse.</p>
-                            <a href="#" class="btn btn-warning">Comprar agora</a>
-                        </div>
-                    </div>
-                </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Produtos</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="produtos.html#pelucias">Pelúcias</a></li>
+                            <li><a class="dropdown-item" href="produtos.html#figures">Figures</a></li>
+                            <li><a class="dropdown-item" href="produtos.html#bustos">Bustos/Réplicas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
             </div>
-        </section>
-    
-        <!-- Seção de Pelúcias -->
+            <form class="d-flex flex-grow-1 mx-2" role="search">
+                <input class="form-control me-2 flex-grow-1" type="search" placeholder="O que deseja?"
+                    aria-label="Search">
+                <button class="btn btn-outline-warning" type="submit"><img src="img/lupa.png" alt="lupa" width="20"
+                        height="20"></button>
+            </form>
+            <div class="d-flex">
+                <div class="btn-group mx-1">
+                    <button class="btn btn-outline-warning dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="img/perfil-de-usuario.png" alt="Login" width="20" height="20">
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="cadastro.html">Cadastro/Login</a></li>
+                    </ul>
+                </div>
+                <button class="btn btn-outline-warning mx-1" id="cartButton">
+                    <a href="#" class="cart-icon" onclick="toggleCart()">
+                        <img src="img/carrinho-de-compras.png" alt="Carrinho de Compras" width="20" height="20">
+                        <span id="cart-count">0</span>
+                    </a>
+                </button>
+
+            </div>
+        </div>
+    </nav>
+    <br><br><br><br>
+
+    <div class="container">
+
+        <!-- Seção de Pelúcias (verde) -->
         <section id="pelucias" class="my-5">
             <h2>Pelúcias</h2>
             <div class="row">
                 <!-- Card de produto 1 -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <img src="img/prod_pelucia1.jpeg" class="card-img-top" alt="pelucia1">
+                        <img src="imgprodutos/prod_verd3.png" class="card-img-top" alt="pelucia1">
                         <div class="card-body">
                             <h5 class="card-title">Pochita</h5>
-                            <p class="card-text">Adote o adorável Pochita do anime "Chainsaw Man". Perfeito para abraços e batalhas contra demônios.</p>
+                            <p class="card-price">R$ 89,90</p>
+                            <p class="card-text">Adote o adorável Pochita do anime "Chainsaw Man". Perfeito para abraços
+                                e batalhas contra demônios.</p>
                             <a href="#" class="btn btn-warning">Comprar agora</a>
                         </div>
                     </div>
                 </div>
+
                 <!-- Card de produto 2 -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <img src="img/prod_pelucia2.jpeg" class="card-img-top" alt="pelucia2">
+                        <img src="imgprodutos/prod_verd1.png" class="card-img-top" alt="pelucia2">
                         <div class="card-body">
                             <h5 class="card-title">Pokémon Surpresa</h5>
-                            <p class="card-text">Descubra qual Pokémon você vai pegar com esta pelúcia surpresa! Perfeito para treinadores de todas as idades.</p>
+                            <p class="card-price">R$ 99,90</p>
+                            <p class="card-text">Descubra qual Pokémon você vai pegar com esta pelúcia surpresa!
+                                Perfeito para treinadores de todas as idades.</p>
                             <a href="#" class="btn btn-warning">Comprar agora</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Card de produto -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="imgprodutos/prod_verd2.png" class="card-img-top"
+                            alt="Pelúcia Rei Ayanami - Evangelion">
+                        <div class="card-body">
+                            <h5 class="card-title">Pelúcia Rei Ayanami - Evangelion</h5>
+                            <p class="card-price">R$216,31</p>
+                            <p class="card-text">Traga a tranquilidade de Rei Ayanami de Evangelion para casa com esta
+                                adorável pelúcia, perfeita para fãs do anime.</p>
+                            <a href="#" class="btn btn-warning">Comprar agora</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção de Bustos/Replicas (vermelho)-->
+                <section id="bustos" class="my-5">
+                    <h2>Bustos e réplicas</h2>
+                    <div class="row">
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_verm8.png" class="card-img-top"
+                                    alt="Busto Stay Puft - Caça-Fantasmas">
+                                <div class="card-body">
+                                    <h5 class="card-title">Busto Stay Puft - Caça-Fantasmas</h5>
+                                    <p class="card-price">R$564,90</p>
+                                    <p class="card-text">Prepare-se para enfrentar o terror sobrenatural com o
+                                        Busto Stay Puft, o icônico e adorável monstro de marshmallow dos
+                                        Caça-Fantasmas, revivendo as batalhas épicas dos corajosos caçadores de
+                                        fantasmas enquanto lutam para salvar Nova York de uma ameaça paranormal.
+                                    </p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_verm5.png" class="card-img-top"
+                                    alt="Figure Deadpool - Marvel">
+                                <div class="card-body">
+                                    <h5 class="card-title">Deadpool - Marvel</h5>
+                                    <p class="card-price">R$1399,00</p>
+                                    <p class="card-text">Adicione humor à sua coleção com Deadpool, o Mercenário
+                                        Tagarela da Marvel, conhecido por sua cura rápida e personalidade excêntrica.
+                                    </p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_verm1.png" class="card-img-top"
+                                    alt="Busto Kratos - God of War">
+                                <div class="card-body">
+                                    <h5 class="card-title">Busto Kratos - God of War</h5>
+                                    <p class="card-price">R$464,90</p>
+                                    <p class="card-text">Kratos, o "Fantasma de Esparta", embarca em aventuras para
+                                        mudar seu destino, enfrentando desafios e realizando atos de extrema
+                                        violência
+                                        em busca de vingança e redenção, revelando sua jornada como semideus filho
+                                        de
+                                        Zeus.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_verm2.png" class="card-img-top"
+                                    alt="Réplica Bobble-Head Vault Boy - Fallout">
+                                <div class="card-body">
+                                    <h5 class="card-title">Réplica Bobble-Head Vault Boy - Fallout</h5>
+                                    <p class="card-price">R$244,90</p>
+                                    <p class="card-text">Leve para casa uma réplica do icônico Vault Boy do universo
+                                        de
+                                        Fallout. Este bobble-head é perfeito para fãs da série que desejam adicionar
+                                        um
+                                        toque de humor e nostalgia à sua coleção.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_verm3.png" class="card-img-top"
+                                    alt="Réplica Aku-Aku - Crash Bandicoot">
+                                <div class="card-body">
+                                    <h5 class="card-title">Réplica Aku-Aku - Crash Bandicoot</h5>
+                                    <p class="card-price">R$264,90</p>
+                                    <p class="card-text">Traga para casa uma réplica do lendário Aku-Aku do universo
+                                        de
+                                        Crash Bandicoot. Este item nostálgico é perfeito para fãs que desejam
+                                        reviver as
+                                        aventuras clássicas do marsupial mais famoso dos videogames.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_verm7.png" class="card-img-top"
+                                    alt="Réplica Delorean - De Volta para o Futuro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Réplica Delorean - De Volta para o Futuro</h5>
+                                    <p class="card-price">R$274,90</p>
+                                    <p class="card-text">Viaje pelo tempo e espaço com a réplica do icônico
+                                        Delorean, o carro modificado que levou Marty McFly em aventuras
+                                        emocionantes no passado, presente e futuro, revivendo os momentos
+                                        inesquecíveis da trilogia enquanto enfrentam desafios temporais e lutam
+                                        para salvar o futuro.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_verm4.png" class="card-img-top"
+                                    alt="Réplica Escudo Capitão América - Marvel Studios">
+                                <div class="card-body">
+                                    <h5 class="card-title">Réplica Escudo Capitão América - Marvel Studios</h5>
+                                    <p class="card-price">R$264,90</p>
+                                    <p class="card-text">O Escudo do Capitão América, um símbolo de patriotismo e
+                                        heroísmo, protege os inocentes e luta pela justiça, sendo uma poderosa arma
+                                        usada pelo super-herói em suas batalhas contra vilões.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_verm6.png" class="card-img-top"
+                                    alt="Figure Magneto - Marvel">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mascara Magneto - Marvel</h5>
+                                    <p class="card-price">R$1399,00</p>
+                                    <p class="card-text">Domine o poder do magnetismo como Magneto, o mutante poderoso
+                                        da Marvel, lutando por um mundo sem opressão para os mutantes.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_verm9.png" class="card-img-top"
+                                    alt="Busto Son Goku - Dragon Ball Z">
+                                <div class="card-body">
+                                    <h5 class="card-title">Busto Son Goku - Dragon Ball Z</h5>
+                                    <p class="card-price">R$564,90</p>
+                                    <p class="card-text">Dragon Ball é sobre a luta entre o bem e o mal. A princípio
+                                        alguns dos personagens pretendem reunir as sete Esferas do Dragão para pedir
+                                        algum desejo pessoal, mas eles aprendem que estes objetos também são procurados
+                                        por outros para o mal, que os leva a enfrentá-los em mais de uma ocasião.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_verm10.png" class="card-img-top"
+                                    alt="Réplica Esfera do Dragão - Dragon Ball Z">
+                                <div class="card-body">
+                                    <h5 class="card-title">Réplica Esfera do Dragão - Dragon Ball Z</h5>
+                                    <p class="card-price">R$94,90</p>
+                                    <p class="card-text">Dragon Ball é sobre a luta entre o bem e o mal. A princípio
+                                        alguns dos personagens pretendem reunir as sete Esferas do Dragão para pedir
+                                        algum desejo pessoal, mas eles aprendem que estes objetos também são procurados
+                                        por outros para o mal, que os leva a enfrentá-los em mais de uma ocasião.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_verm11.png" class="card-img-top"
+                                    alt="Réplica Gomu Gomu - One Piece">
+                                <div class="card-body">
+                                    <h5 class="card-title">Réplica Gomu Gomu - One Piece</h5>
+                                    <p class="card-price">R$104,90</p>
+                                    <p class="card-text">A obra acompanha a história de Monkey D. Luffy, um jovem cujo
+                                        corpo ganha propriedades elásticas após comer uma "fruta do diabo". O
+                                        protagonista, junto à tripulação dos Piratas do Chapéu de Palha, exploram os
+                                        mares em busca do tesouro One Piece, o que o fará se tornar o Rei dos Piratas.
+                                    </p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </section>
+
+
+
+
+
+
+
+                <!-- Seção de Figures (laranja) -->
+                <section id="figures" class="my-5">
+                    <h2>Figures</h2>
+                    <div class="row">
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar0.png" class="card-img-top"
+                                    alt="Figure Scorpion - Mortal Kombat">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Scorpion - Mortal Kombat</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">Scorpion, um dos melhores guerreiros do clã Shirai Ryu, busca
+                                        vingança contra Sub-Zero e o clã Lin Kuei após sua morte e a destruição de sua
+                                        família.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar1.png" class="card-img-top"
+                                    alt="Figure Sub-Zero - Mortal Kombat">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Sub-Zero - Mortal Kombat</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">Sub-Zero, mestre do controle de gelo, é conhecido por sua
+                                        rivalidade com Scorpion. Após sua morte, Bi-Han renasce como Noob Saibot, e seu
+                                        irmão mais novo assume o título.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar2.png" class="card-img-top"
+                                    alt="Figure Ellie - The Last of Us">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Ellie - The Last of Us</h5>
+                                    <p class="card-price">R$554,90</p>
+                                    <p class="card-text">Ellie, órfã na zona de quarentena de Boston, embarca em uma
+                                        jornada épica pela América após ser infectada com a infecção cerebral por
+                                        Cordyceps, descobrindo sua imunidade e sua importância para a humanidade.
+                                    </p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar3.png" class="card-img-top"
+                                    alt="Figure Joel - The Last of Us">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Joel - The Last of Us</h5>
+                                    <p class="card-price">R$524,90</p>
+                                    <p class="card-text">Joel, um sobrevivente cínico, protege Ellie em um mundo
+                                        pós-apocalíptico devastado pela infecção cerebral por Cordyceps, formando
+                                        com
+                                        ela um forte vínculo enquanto enfrentam desafios em sua jornada.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar4.png" class="card-img-top"
+                                    alt="Figure Kratos & Atreus - God of War">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Kratos & Atreus - God of War</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">Atreus e Kratos enfrentam desafios juntos, com uma relação
+                                        que
+                                        se desenvolve durante suas aventuras. Enquanto Atreus cresce e aprende mais
+                                        sobre o mundo ao seu redor, Kratos também se esforça para compartilhar suas
+                                        experiências e proteger seu filho em um mundo repleto de perigos e deuses
+                                        ambiciosos.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar5.png" class="card-img-top"
+                                    alt="Figure Sonic - Sonic The Hedgehog">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Sonic - Sonic The Hedgehog</h5>
+                                    <p class="card-price">R$224,90</p>
+                                    <p class="card-text">Acelere com Sonic, o ouriço azul mais famoso dos
+                                        videogames.
+                                        Esta figura captura a essência da velocidade e da aventura que caracterizam
+                                        o
+                                        mundo de Sonic, perfeita para fãs de todas as idades.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar6.png" class="card-img-top"
+                                    alt="Figure Tails - Sonic The Hedgehog">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Tails - Sonic The Hedgehog</h5>
+                                    <p class="card-price">R$224,90</p>
+                                    <p class="card-text">Acompanhe Tails, o parceiro leal de Sonic, em suas
+                                        aventuras
+                                        emocionantes. Esta figura traz à vida a energia e a habilidade tecnológica
+                                        de
+                                        Tails, adicionando um toque de diversão ao seu universo de colecionáveis.
+                                    </p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar7.png" class="card-img-top"
+                                    alt="Funko Crash Kart - Crash Bandicoot">
+                                <div class="card-body">
+                                    <h5 class="card-title">Funko Crash Kart - Crash Bandicoot</h5>
+                                    <p class="card-price">R$104,90</p>
+                                    <p class="card-text">Crash Bandicoot, um Bandicoot Listrado Oriental, evoluído
+                                        pelo
+                                        Doutor Neo Cortex, luta contra seu arqui-inimigo para restaurar a paz na
+                                        ilha de
+                                        N. Sanity, sempre acompanhado por seu aliado, Aku Aku.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar8.png" class="card-img-top"
+                                    alt="Figure Superman - DC COMICS">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Superman - DC COMICS</h5>
+                                    <p class="card-price">R$484,90</p>
+                                    <p class="card-text">Superman, o herói nascido em Krypton e criado na Terra como
+                                        Clark Kent, luta por justiça contra criminosos na cidade de Metrópolis,
+                                        protegendo-a com suas habilidades sobre-humanas.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar9.png" class="card-img-top"
+                                    alt="Figure Batman - DC COMICS">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Batman - DC COMICS</h5>
+                                    <p class="card-price">R$484,90</p>
+                                    <p class="card-text">Batman, cuja identidade secreta é Bruce Wayne, protege
+                                        Gotham
+                                        City como um vigilante com uma persona inspirada no morcego, combatendo o
+                                        crime
+                                        ao lado de aliados como Robin e o comissário Gordon.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar10.png" class="card-img-top"
+                                    alt="Figure Wolverine - Marvel">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Wolverine - Marvel</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">Wolverine, um mutante dos X-Men, possui sentidos aguçados,
+                                        fator de cura, garras retráteis e capacidades físicas aprimoradas. Também fez
+                                        parte da Tropa Alfa e Vingadores.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar13.png" class="card-img-top"
+                                    alt="Figure Hank - Caverna do Dragão">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Hank - Caverna do Dragão</h5>
+                                    <p class="card-price">R$364,90</p>
+                                    <p class="card-text">Um grupo de seis jovens é transportado para outro mundo, onde
+                                        enfrentam o mago maléfico Vingador e buscam voltar para casa.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar14.png" class="card-img-top"
+                                    alt="Figure Sheila - Caverna do Dragão">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Sheila - Caverna do Dragão</h5>
+                                    <p class="card-price">R$364,90</p>
+                                    <p class="card-text">Um grupo de seis jovens é transportado para outro mundo, onde
+                                        enfrentam o mago maléfico Vingador e buscam voltar para casa.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar15.png" class="card-img-top"
+                                    alt="Figure Diana - Caverna do Dragão">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Diana - Caverna do Dragão</h5>
+                                    <p class="card-price">R$364,90</p>
+                                    <p class="card-text">Um grupo de seis jovens é transportado para outro mundo, onde
+                                        enfrentam o mago maléfico Vingador e buscam voltar para casa.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar16.png" class="card-img-top"
+                                    alt="Figure Presto - Caverna do Dragão">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Presto - Caverna do Dragão</h5>
+                                    <p class="card-price">R$364,90</p>
+                                    <p class="card-text">Um grupo de seis jovens é transportado para outro mundo, onde
+                                        enfrentam o mago maléfico Vingador e buscam voltar para casa.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar17.png" class="card-img-top"
+                                    alt="Figure Bobby - Caverna do Dragão">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Bobby - Caverna do Dragão</h5>
+                                    <p class="card-price">R$364,90</p>
+                                    <p class="card-text">Um grupo de seis jovens é transportado para outro mundo, onde
+                                        enfrentam o mago maléfico Vingador e buscam voltar para casa.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar18.png" class="card-img-top"
+                                    alt="Figure Eric - Caverna do Dragão">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Eric - Caverna do Dragão</h5>
+                                    <p class="card-price">R$364,90</p>
+                                    <p class="card-text">Um grupo de seis jovens é transportado para outro mundo, onde
+                                        enfrentam o mago maléfico Vingador e buscam voltar para casa.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar19.png" class="card-img-top"
+                                    alt="Figure Mestre dos Magos - Caverna do Dragão">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Mestre dos Magos - Caverna do Dragão</h5>
+                                    <p class="card-price">R$364,90</p>
+                                    <p class="card-text">Reviva as aventuras épicas do grupo de jovens transportados
+                                        para um mundo mágico pelo enigmático Mestre dos Magos, enquanto lutam para
+                                        enfrentar desafios e retornar para casa.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar20.png" class="card-img-top"
+                                    alt="Figure Vingador - Caverna do Dragão">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Vingador - Caverna do Dragão</h5>
+                                    <p class="card-price">R$364,90</p>
+                                    <p class="card-text">Recrie as batalhas épicas do grupo de jovens transportados
+                                        para
+                                        um mundo mágico pelo temível Vingador, enfrentando ameaças do Reino enquanto
+                                        buscam retornar para casa.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar21.png" class="card-img-top"
+                                    alt="Figure Darth Vader - Star Wars">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Darth Vader - Star Wars</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">Junte-se ao lado sombrio da Força com Darth Vader, o temido
+                                        líder do Império Galáctico, em sua busca por esmagar a Aliança Rebelde e
+                                        subjugar a galáxia.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar22.png" class="card-img-top"
+                                    alt="Figure Luke Skywalker - Star Wars">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Luke Skywalker - Star Wars</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">Prepare-se para se juntar à luta pela liberdade com Luke
+                                        Skywalker, o herói destinado a desafiar o Império Galáctico e enfrentar
+                                        Darth
+                                        Vader em uma batalha épica.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar23.png" class="card-img-top"
+                                    alt="Figure Yoda - Star Wars">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Yoda - Star Wars</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">Aprimore suas habilidades na Força com Yoda, o lendário
+                                        Mestre
+                                        Jedi, enquanto ele orienta os Jedi na luta contra as forças do lado negro,
+                                        inspirando esperança na galáxia.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar24.png" class="card-img-top"
+                                    alt="Figure Voldemort - Harry Potter">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Voldemort - Harry Potter</h5>
+                                    <p class="card-price">R$484,90</p>
+                                    <p class="card-text">Entre no mundo mágico de Harry Potter com Voldemort, o
+                                        bruxo
+                                        das trevas determinado a conquistar a magia e subjugar o mundo dos trouxas.
+                                    </p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar25.png" class="card-img-top"
+                                    alt="Figure Harry Potter - Harry Potter">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Harry Potter - Harry Potter</h5>
+                                    <p class="card-price">R$374,90</p>
+                                    <p class="card-text">Faça parte da jornada mágica de Harry Potter com esta
+                                        figura
+                                        icônica do famoso bruxinho de Hogwarts, acompanhando suas aventuras enquanto
+                                        enfrenta desafios e luta contra as forças das trevas.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar26.png" class="card-img-top"
+                                    alt="Funko Dobby - Harry Potter">
+                                <div class="card-body">
+                                    <h5 class="card-title">Funko Dobby - Harry Potter</h5>
+                                    <p class="card-price">R$94,90</p>
+                                    <p class="card-text">Adicione um toque de magia à sua coleção com Dobby, o
+                                        elfo doméstico leal e corajoso de Harry Potter, celebrando a liberdade e
+                                        a amizade enquanto mostra que até os mais humildes podem desempenhar um
+                                        papel crucial na luta contra o mal.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar27.png" class="card-img-top"
+                                    alt="Figure Frodo & Gollum - Senhor dos Anéis">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Frodo & Gollum - Senhor dos Anéis</h5>
+                                    <p class="card-price">R$484,90</p>
+                                    <p class="card-text">Reviva a jornada épica de Frodo Bolseiro e seu
+                                        inusitado companheiro, Gollum, na busca para destruir o Um Anel e
+                                        derrotar Sauron, explorando as terras de Terra Média enquanto enfrentam
+                                        perigos mortais e lutam contra a corrupção do poderoso artefato.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar28.png" class="card-img-top"
+                                    alt="Figure Sauron - Senhor dos Anéis">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Sauron - Senhor dos Anéis</h5>
+                                    <p class="card-price">R$484,90</p>
+                                    <p class="card-text">Testemunhe o poder sombrio de Sauron, o Senhor do
+                                        Escuro que busca recuperar o Um Anel e dominar Terra Média,
+                                        preparando-se para a batalha final enquanto os povos livres se unem para
+                                        enfrentar as legiões do mal e destruir a fonte de sua tirania.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar29.png" class="card-img-top"
+                                    alt="Figure Gandalf - Senhor dos Anéis">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Gandalf - Senhor dos Anéis</h5>
+                                    <p class="card-price">R$484,90</p>
+                                    <p class="card-text">Junte-se à luta pela liberdade com Gandalf, o sábio e
+                                        poderoso mago que guia os heróis na batalha contra as trevas de Sauron,
+                                        aventurando-se pelas terras vastas de Terra Média enquanto lidera os
+                                        povos livres na luta pela sobrevivência e pela esperança.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar30.png" class="card-img-top"
+                                    alt="Figure Marty Mcfly - De Volta para o Futuro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Marty Mcfly - De Volta para o Futuro</h5>
+                                    <p class="card-price">R$374,90</p>
+                                    <p class="card-text">Acompanhe as aventuras eletrizantes de Marty McFly, o
+                                        adolescente destemido que viaja pelo tempo em um Delorean modificado,
+                                        explorando o passado, presente e futuro enquanto enfrenta paradoxos
+                                        temporais e luta para corrigir os erros do passado e salvar o futuro.
+                                    </p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar31.png" class="card-img-top"
+                                    alt="Figure Doctor Brown - De Volta para o Futuro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Doctor Brown - De Volta para o Futuro</h5>
+                                    <p class="card-price">R$374,90</p>
+                                    <p class="card-text">Entre na cabine do tempo com o excêntrico cientista Doc
+                                        Brown, o gênio por trás do Delorean modificado que desafia as fronteiras
+                                        do tempo, aventurando-se ao lado de Doc e Marty McFly em uma jornada
+                                        repleta de perigos, risos e momentos inesquecíveis.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar32.png" class="card-img-top"
+                                    alt="Figure Geléia - Caça-Fantasmas">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Geléia - Caça-Fantasmas</h5>
+                                    <p class="card-price">R$384,90</p>
+                                    <p class="card-text">Entre na ação paranormal com a figura de Geléia, um dos
+                                        muitos fantasmas assombrosos enfrentados pelos Caça-Fantasmas,
+                                        juntando-se à equipe enquanto eles usam suas armas e armadilhas
+                                        especiais para capturar esses seres sobrenaturais e proteger a cidade de
+                                        Nova York.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar33.png" class="card-img-top"
+                                    alt="Figure Maverick - Top Gun">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Maverick - Top Gun</h5>
+                                    <p class="card-price">R$384,90</p>
+                                    <p class="card-text">Maverick, um piloto talentoso e arrogante, treina na escola
+                                        naval de pilotos, enfrentando rivalidades e buscando a atenção da instrutora
+                                        Charlotte.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar34.png" class="card-img-top"
+                                    alt="Figure Rocky Balboa - Rocky">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Rocky Balboa - Rocky</h5>
+                                    <p class="card-price">R$384,90</p>
+                                    <p class="card-text">Rocky Balboa, um boxeador da Filadélfia, é escolhido para lutar
+                                        contra o campeão Apollo Creed, enquanto treina com Mickey e inicia um romance
+                                        com Adrian.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar35.png" class="card-img-top"
+                                    alt="Figure Apollo Creed - Rocky">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Apollo Creed - Rocky</h5>
+                                    <p class="card-price">R$384,90</p>
+                                    <p class="card-text">Apollo Creed, o campeão dos pesos pesados, enfrenta Rocky
+                                        Balboa, um boxeador da classe trabalhadora da Filadélfia, que é escolhido para a
+                                        luta por acaso.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar36.png" class="card-img-top"
+                                    alt="Figure John Rambo - Rambo">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure John Rambo - Rambo</h5>
+                                    <p class="card-price">R$384,90</p>
+                                    <p class="card-text">Veterano do Vietnã, John Rambo usa seu treinamento e
+                                        agressividade para sobreviver após ser preso e torturado por policiais.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar37.png" class="card-img-top"
+                                    alt="Figure Miyagi - Karate Kid">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Miyagi - Karate Kid</h5>
+                                    <p class="card-price">R$384,90</p>
+                                    <p class="card-text">O senhor Miyagi ensina karatê a Daniel LaRusso para autodefesa
+                                        e um campeonato, enquanto ele enfrenta uma gangue escolar.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar38.png" class="card-img-top"
+                                    alt="Figure Daniel LaRusso - Karate Kid">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Daniel LaRusso - Karate Kid</h5>
+                                    <p class="card-price">R$384,90</p>
+                                    <p class="card-text">Daniel LaRusso é treinado pelo senhor Miyagi para se defender e
+                                        competir em um campeonato, enquanto lida com valentões da escola.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar39.png" class="card-img-top"
+                                    alt="Figure Robocop - Robocop">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Robocop - Robocop</h5>
+                                    <p class="card-price">R$384,90</p>
+                                    <p class="card-text">Um policial morto é transformado em um ciborgue para combater o
+                                        crime em Detroit, mas busca vingança ao recuperar suas memórias.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar40.png" class="card-img-top"
+                                    alt="Figure Don Corleone - Poderoso Chefão">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Don Corleone - Poderoso Chefão</h5>
+                                    <p class="card-price">R$554,90</p>
+                                    <p class="card-text">A família Corleone luta pelo poder nos EUA após a Segunda
+                                        Guerra Mundial. Vito Corleone é ferido, forçando seus filhos Michael e Sonny a
+                                        assumir os negócios.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar41.png" class="card-img-top"
+                                    alt="Figure Tony Montana - Scarface">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Tony Montana - Scarface</h5>
+                                    <p class="card-price">R$554,90</p>
+                                    <p class="card-text">Tony Montana se torna o chefe do tráfico de drogas em Miami,
+                                        eliminando todos que entram em seu caminho para controlar a cocaína na cidade.
+                                    </p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar42.png" class="card-img-top"
+                                    alt="Figure Xenomorfo - Alien">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Xenomorfo - Alien</h5>
+                                    <p class="card-price">R$384,90</p>
+                                    <p class="card-text">Uma nave espacial recebe sinais de um asteroide e um tripulante
+                                        é atacado, levando um embrião alienígena a bordo que cresce e ameaça toda a
+                                        tripulação.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar43.png" class="card-img-top"
+                                    alt="Figure Jason Voorhees - Sexta-Feira 13">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Jason Voorhees - Sexta-Feira 13</h5>
+                                    <p class="card-price">R$384,90</p>
+                                    <p class="card-text">Jovens ignoram avisos sobre um antigo homicídio em Crystal Lake
+                                        e são perseguidos por um assassino brutal enquanto acampam.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar44.png" class="card-img-top"
+                                    alt="Figure Leatherface - O Massacre da Serra Elétrica">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Leatherface - O Massacre da Serra Elétrica</h5>
+                                    <p class="card-price">R$384,90</p>
+                                    <p class="card-text">Cinco jovens se perdem e encontram uma família de canibais,
+                                        enfrentando ataques brutais e sádicos.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar45.png" class="card-img-top"
+                                    alt="Figure Chucky - O Brinquedo Assassino">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Chucky - O Brinquedo Assassino</h5>
+                                    <p class="card-price">R$384,90</p>
+                                    <p class="card-text">Uma mulher compra para seu filho um boneco amaldiçoado por um
+                                        assassino em série morto dentro de uma loja de brinquedos. Pouco antes, ele faz
+                                        um ritual de vodu com o boneco, que ganha vida e se torna um perigoso psicopata.
+                                    </p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar46.png" class="card-img-top"
+                                    alt="Figure Freddie Mercury - Queen">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Freddie Mercury - Queen</h5>
+                                    <p class="card-price">R$484,90</p>
+                                    <p class="card-text">Freddie Mercury foi um cantor, pianista e compositor britânico,
+                                        conhecido pelo seu trabalho com a banda britânica de rock Queen, que integrou
+                                        como vocalista de 1970 até o ano de sua morte, 1991. É considerado como um dos
+                                        melhores cantores de todos os tempos.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar47.png" class="card-img-top"
+                                    alt="Funko Freddie Mercury - Queen">
+                                <div class="card-body">
+                                    <h5 class="card-title">Funko Freddie Mercury - Queen</h5>
+                                    <p class="card-price">R$484,90</p>
+                                    <p class="card-text">Freddie Mercury foi um cantor, pianista e compositor britânico,
+                                        conhecido pelo seu trabalho com a banda britânica de rock Queen, que integrou
+                                        como vocalista de 1970 até o ano de sua morte, 1991. É considerado como um dos
+                                        melhores cantores de todos os tempos.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar48.png" class="card-img-top"
+                                    alt="Figure Angus Young - ACDC">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Angus Young - ACDC</h5>
+                                    <p class="card-price">R$484,90</p>
+                                    <p class="card-text">Angus McKinnon Young é um guitarrista e compositor escocês
+                                        naturalizado na Austrália, conhecido por ser guitarrista solo, compositor, líder
+                                        e co-fundador da banda de hard rock australiana AC/DC.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar49.png" class="card-img-top"
+                                    alt="Figure Slash - Guns N' Roses">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Slash - Guns N' Roses</h5>
+                                    <p class="card-price">R$484,90</p>
+                                    <p class="card-text">Saul Hudson, conhecido pelo seu nome artístico Slash, é um
+                                        guitarrista anglo-americano mundialmente famoso como integrante da formação
+                                        clássica da banda Guns N' Roses, com quem alcançou sucesso mundial no final da
+                                        década de 1980 e início dos anos 90.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar50.png" class="card-img-top"
+                                    alt="Funko Slash - Guns N' Roses">
+                                <div class="card-body">
+                                    <h5 class="card-title">Funko Slash - Guns N' Roses</h5>
+                                    <p class="card-price">R$484,90</p>
+                                    <p class="card-text">Saul Hudson, conhecido pelo seu nome artístico Slash, é um
+                                        guitarrista anglo-americano mundialmente famoso como integrante da formação
+                                        clássica da banda Guns N' Roses, com quem alcançou sucesso mundial no final da
+                                        década de 1980 e início dos anos 90.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar51.png" class="card-img-top"
+                                    alt="Figure Goku SSJ1 - Dragon Ball Z">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Goku SSJ1 - Dragon Ball Z</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">Dragon Ball é sobre a luta entre o bem e o mal. A princípio
+                                        alguns dos personagens pretendem reunir as sete Esferas do Dragão para pedir
+                                        algum desejo pessoal, mas eles aprendem que estes objetos também são procurados
+                                        por outros para o mal, que os leva a enfrentá-los em mais de uma ocasião.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar52.png" class="card-img-top"
+                                    alt="Figure Roronoa Zoro - One Piece">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Roronoa Zoro - One Piece</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">A obra acompanha a história de Monkey D. Luffy, um jovem cujo
+                                        corpo ganha propriedades elásticas após comer uma "fruta do diabo". O
+                                        protagonista, junto à tripulação dos Piratas do Chapéu de Palha, exploram os
+                                        mares em busca do tesouro One Piece, o que o fará se tornar o Rei dos Piratas.
+                                    </p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar53.png" class="card-img-top" alt="figure1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Doflamingo</h5>
+                                    <p class="card-price">R$ 159,90</p>
+                                    <p class="card-text">Adicione o vilão carismático Doflamingo do anime "One
+                                        Piece" à
+                                        sua coleção. Disponível para todos os fãs dos Piratas do Chapéu de Palha.
+                                    </p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar63.png" class="card-img-top" alt="figure2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Luffy Gear 5</h5>
+                                    <p class="card-price">R$ 189,90</p>
+                                    <p class="card-text">Aventure-se no Novo Mundo com Luffy em Gear 5, diretamente
+                                        do
+                                        anime "One Piece". Disponível para todos os futuros Reis dos Piratas.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar54.png" class="card-img-top"
+                                    alt="Figure Sukuna - Jujutsu Kaisen">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Sukuna - Jujutsu Kaisen</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">Yuji Itadori é um estudante do ensino médio que vive em Sendai
+                                        com seu avô. Ele evita regularmente a equipe de pista devido à sua aversão ao
+                                        atletismo, apesar de seu talento inato para o esporte.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar55.png" class="card-img-top"
+                                    alt="Figure Satoru Gojo - Jujutsu Kaisen">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Satoru Gojo - Jujutsu Kaisen</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">Yuji Itadori é um estudante do ensino médio que vive em Sendai
+                                        com seu avô. Ele evita regularmente a equipe de pista devido à sua aversão ao
+                                        atletismo, apesar de seu talento inato para o esporte.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar56.png" class="card-img-top"
+                                    alt="Figure Megumi Fushiguro - Jujutsu Kaisen">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Megumi Fushiguro - Jujutsu Kaisen</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">Yuji Itadori é um estudante do ensino médio que vive em Sendai
+                                        com seu avô. Ele evita regularmente a equipe de pista devido à sua aversão ao
+                                        atletismo, apesar de seu talento inato para o esporte.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar57.png" class="card-img-top" alt="Figure Guts - Berserk">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Guts - Berserk</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">O misterioso Guts, o "Espadachim Negro", carrega em sua mão
+                                        mecânica uma enorme espada, e em seu pescoço uma estranha marca que atrai forças
+                                        demoníacas. Em sua busca por vingança contra um antigo inimigo, nem tudo sai a
+                                        seu favor, e ele recebe ajuda de uma fantástica criatura.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar58.png" class="card-img-top"
+                                    alt="Figure EVA-01 - Evangelion">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure EVA-01 - Evangelion</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">Em um mundo pós-apocalíptico, uma organização paramilitar
+                                        chamada NERV é criada para combater monstros chamados Anjos, utilizando seres
+                                        gigantes chamados Unidades Evangelion (ou EVAs). Estes seres são controlados por
+                                        adolescentes, recrutados pelo ano em que nasceram, quando ocorreu o Segundo
+                                        Impacto.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar59.png" class="card-img-top"
+                                    alt="Figure Denji - Chainsaw Man">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Denji - Chainsaw Man</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">Denji é um adolescente que mora com Pochita, o Demônio da
+                                        Motosserra. Por conta das dívidas que herdou de seu pai, ele vive na miséria,
+                                        exterminando outros demônios com Pochita para pagar as contas. Até que, um dia,
+                                        Denji é traído e morre.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar60.png" class="card-img-top"
+                                    alt="Figure Naruto - Naruto Shippuden">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Naruto - Naruto Shippuden</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">Há doze anos, uma Raposa de Nove-Caudas apareceu de repente. Os
+                                        movimentos de suas caudas esmagavam montanhas, causando maremotos que destruíram
+                                        a costa. Os ninjas se juntaram para defender sua aldeia. Um shinobi enfrentou a
+                                        Raposa de Nove-Caudas num combate mortal, ele sacrificou sua vida para derrotar
+                                        a besta e selar seu espírito dentro de um corpo humano. Esse ninja era conhecido
+                                        como o Quarto Hokage.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar61.png" class="card-img-top"
+                                    alt="Figure Itachi - Naruto Shippuden">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Itachi - Naruto Shippuden</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">Há doze anos, uma Raposa de Nove-Caudas apareceu de repente. Os
+                                        movimentos de suas caudas esmagavam montanhas, causando maremotos que destruíram
+                                        a costa. Os ninjas se juntaram para defender sua aldeia. Um shinobi enfrentou a
+                                        Raposa de Nove-Caudas num combate mortal, ele sacrificou sua vida para derrotar
+                                        a besta e selar seu espírito dentro de um corpo humano. Esse ninja era conhecido
+                                        como o Quarto Hokage.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de produto -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="imgprodutos/prod_lar62.png" class="card-img-top"
+                                    alt="Figure Jiraya - Naruto Shippuden">
+                                <div class="card-body">
+                                    <h5 class="card-title">Figure Jiraya - Naruto Shippuden</h5>
+                                    <p class="card-price">R$474,90</p>
+                                    <p class="card-text">Há doze anos, uma Raposa de Nove-Caudas apareceu de repente. Os
+                                        movimentos de suas caudas esmagavam montanhas, causando maremotos que destruíram
+                                        a costa. Os ninjas se juntaram para defender sua aldeia. Um shinobi enfrentou a
+                                        Raposa de Nove-Caudas num combate mortal, ele sacrificou sua vida para derrotar
+                                        a besta e selar seu espírito dentro de um corpo humano. Esse ninja era conhecido
+                                        como o Quarto Hokage.</p>
+                                    <a href="#" class="btn btn-warning">Comprar agora</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                    </div>
             </div>
         </section>
-    
-        <!-- Seção de Figures -->
-        <section id="figures" class="my-5">
-            <h2>Figures</h2>
-            <div class="row">
-                <!-- Card de produto 1 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img src="img/prod_figure1.jpeg" class="card-img-top" alt="figure1">
-                        <div class="card-body">
-                            <h5 class="card-title">Doflamingo</h5>
-                            <p class="card-text">Adicione o vilão carismático Doflamingo do anime "One Piece" à sua coleção. Disponível para todos os fãs dos Piratas do Chapéu de Palha.</p>
-                            <a href="#" class="btn btn-warning">Comprar agora</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card de produto 2 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img src="img/prod_figure2.jpeg" class="card-img-top" alt="figure2">
-                        <div class="card-body">
-                            <h5 class="card-title">Luffy Gear 5</h5>
-                            <p class="card-text">Aventure-se no Novo Mundo com Luffy em Gear 5, diretamente do anime "One Piece". Disponível para todos os futuros Reis dos Piratas.</p>
-                            <a href="#" class="btn btn-warning">Comprar agora</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card de produto 3 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img src="img/prod_figure3.jpeg" class="card-img-top" alt="figure3">
-                        <div class="card-body">
-                            <h5 class="card-title">Batman</h5>
-                            <p class="card-text">Proteja Gotham com o icônico Batman. Esta figure detalhada é um item obrigatório para todos os fãs do Cavaleiro das Trevas.</p>
-                            <a href="#" class="btn btn-warning">Comprar agora</a>
-                        </div>
-                    </div>
-                </div>
+
+    </div>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h5>Carrinho de Compras</h5>
+            <button class="close-btn" onclick="toggleCart()">×</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <p>Nada foi encontrado</p>
+        </div>
+        <div class="cart-footer">
+            <p id="cart-total">Total: R$ 0,00</p>
+            <div class="button-group">
+                <button class="btn btn-danger" onclick="clearCart()">Limpar</button>
+                <button class="btn btn-success" onclick="finalizePurchase()">Finalizar Compra</button>
             </div>
-        </section>
-    
-        <!-- Seção de Cozinha -->
-        <section id="cozinha" class="my-5">
-            <h2>Cozinha</h2>
-            <div class="row">
-                <!-- Card de produto 1 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img src="img/prod_caneca1.jpeg" class="card-img-top" alt="caneca">
-                        <div class="card-body">
-                            <h5 class="card-title">Caneca Omni-Man</h5>
-                            <p class="card-text">Desfrute do seu café matinal com a força de Omni-Man do anime "Invincible". Ideal para super-heróis e vilões.</p>
-                            <a href="#" class="btn btn-warning">Comprar agora</a>
-                        </div>
-                    </div>  
-                </div>
+        </div>
+    </div>
+
+    <div id="order-popup" class="order-popup">
+        <div class="order-popup-content">
+            <span class="close" onclick="toggleOrderPopup()">&times;</span>
+            <h2>Finalizar Compra</h2>
+            <div>
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" placeholder="xxxxx-xxx">
+                <button id="btn-calculate-shipping">Calcular Frete</button>
             </div>
-        </section>
+            <p id="shipping-cost">Frete: R$ 0,00</p>
+            <p id="order-total">Total: R$ 0,00</p>
+            <div>
+                <label for="payment-method">Método de Pagamento:</label>
+                <select id="payment-method">
+                    <option value="selecione">Selecione</option>
+                    <option value="pix">PIX</option>
+                    <option value="mercado-pago">Mercado Pago</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="boleto">Boleto</option>
+                    <option value="cartao-credito">Cartão de Crédito</option>
+                    <option value="cartao-debito">Cartão de Débito</option>
+                </select>
+            </div>
+            <div id="payment-details" class="centered"></div>
+            <div id="errorMessage" class="d-none"></div>
+            <div class="button-group">
+                <button class="cancel-button" onclick="cancelOrder()">Cancelar</button>
+                <button class="complete-button" onclick="completeOrder()">Finalizar Compra</button>
+            </div>
+            <p id="successMessage" class="d-none"></p>
+        </div>
     </div>
     
-    <div id="cart-sidebar" class="cart-sidebar">
-      <div class="cart-header">
-          <h5>Carrinho de Compras</h5>
-          <button class="close-btn" onclick="toggleCart()">×</button>
-      </div>
-      <div id="cart-items" class="cart-items">
-          <p>Nada foi encontrado</p>
-      </div>
-      <div class="cart-footer">
-          <button class="btn btn-danger" onclick="clearCart()">Limpar</button>
-          <button class="btn btn-success" onclick="finalizePurchase()">Finalizar Compra</button>
-      </div>
-  </div>
-
-
-      <br><br>
-      <div class="sobre-nos">
+    
+    
+    
+    
+    <br><br>
+    <div class="sobre-nos">
         <br>
         <h2>Explore o universo geek com os melhores produtos da Nerdgoal!</h2>
-        <p>Na Nerdgoal, somos apaixonados pelo universo geek! Nossa missão é oferecer a melhor seleção de produtos relacionados ao mundo dos jogos, cultura geek, animes e filmes, tanto dos clássicos dos anos 80 e 90 como das novidades atuais.</p>
-        <p>Seja você um fã de Caverna do Dragão, Star Wars, The Legend of Zelda, Sonic the Hedgehog, ou mais recentemente, de franquias como The Last Of Us, Jujutsu Kaisen, e muitos outros, temos algo especial para você. Desde figures detalhadas, pelúcias adoráveis, até réplicas incríveis e itens de coleção.</p>
-        <p>Procurando um presente perfeito? Aqui você encontrará diversas opções criativas para surpreender amigos, família e todos os apaixonados pela cultura nerd. Além disso, garantimos facilidade na compra com a opção de parcelamento em até 12 vezes sem juros e entrega rápida.</p>
-        <p>Nosso objetivo é tornar o universo geek acessível para todos, oferecendo produtos com preços acessíveis. Explore o mundo mágico da Nerdgoal e demonstre seu amor pela cultura geek com nossos produtos exclusivos!</p>
+        <p>Na Nerdgoal, somos apaixonados pelo universo geek! Nossa missão é oferecer a melhor seleção de
+            produtos
+            relacionados ao mundo dos jogos, cultura geek, animes e filmes, tanto dos clássicos dos anos 80 e 90
+            como
+            das novidades atuais.</p>
+        <p>Seja você um fã de Caverna do Dragão, Star Wars, The Legend of Zelda, Sonic the Hedgehog, ou mais
+            recentemente, de franquias como The Last Of Us, Jujutsu Kaisen, e muitos outros, temos algo especial
+            para
+            você. Desde figures detalhadas, pelúcias adoráveis, até réplicas incríveis e itens de coleção.</p>
+        <p>Procurando um presente perfeito? Aqui você encontrará diversas opções criativas para surpreender
+            amigos,
+            família e todos os apaixonados pela cultura nerd. Além disso, garantimos facilidade na compra com a
+            opção de
+            parcelamento em até 12 vezes sem juros e entrega rápida.</p>
+        <p>Nosso objetivo é tornar o universo geek acessível para todos, oferecendo produtos com preços
+            acessíveis.
+            Explore o mundo mágico da Nerdgoal e demonstre seu amor pela cultura geek com nossos produtos
+            exclusivos!
+        </p>
         <hr>
         <h3 class="payment-title">Formas de Pagamento</h3>
         <div class="payment-icons">
@@ -223,7 +1464,7 @@
             <i class="fab fa-cc-elo"></i>
         </div>
     </div>
-      <footer class="footer text-white py-4">
+    <footer class="footer text-white py-4">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4 d-flex align-items-center">
@@ -231,7 +1472,8 @@
                     <p class="mb-0 ms-3">Nerdgoal SA<br>Piracicaba - SP</p>
                 </div>
                 <div class="col-md-4 text-center">
-                    <p class="mb-0" style="margin-top: 2%;">&copy; 2024 Nerdgoal. Todos os direitos reservados.</p>
+                    <p class="mb-0" style="margin-top: 2%;">&copy; 2024 Nerdgoal. Todos os direitos reservados.
+                    </p>
                 </div>
                 <div class="col-md-4 text-end footer-icons">
                     <a href="https://www.instagram.com/nerdgoal" class="text-white me-3" target="_blank">
@@ -253,9 +1495,11 @@
 
     <script src="js/rolagem_suave.js"></script>
     <script src="js/carrinho_compras.js"></script>
+    <script src="js/input_compras.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>

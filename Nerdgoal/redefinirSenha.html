@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esqueci Minha Senha</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-white" style="position: fixed; top: 0; width: 100%; z-index: 999;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" width="70vh">Nerdgoal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Produtos</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="produtos.html#pelucias">Pelúcias</a></li>
+                            <li><a class="dropdown-item" href="produtos.html#figures">Figures</a></li>
+                            <li><a class="dropdown-item" href="produtos.html#bustos">Bustos/Réplicas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <form class="d-flex flex-grow-1 mx-2" role="search">
+                <input class="form-control me-2 flex-grow-1" type="search" placeholder="O que deseja?"
+                    aria-label="Search">
+                <button class="btn btn-outline-warning" type="submit"><img src="img/lupa.png" alt="lupa" width="20"
+                        height="20"></button>
+            </form>
+            <div class="d-flex">
+                <div class="btn-group mx-1">
+                    <button class="btn btn-outline-warning dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="img/perfil-de-usuario.png" alt="Login" width="20" height="20">
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="cadastro.html">Cadastro/Login</a></li>
+                    </ul>
+                </div>
+                <button class="btn btn-outline-warning mx-1" id="cartButton">
+                    <a href="#" class="cart-icon" onclick="toggleCart()">
+                        <img src="img/carrinho-de-compras.png" alt="Carrinho de Compras" width="20" height="20">
+                        <span id="cart-count">0</span>
+                    </a>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <br><br> 
+
+    <div class="form-page-senha">
+        <div class="form-container">
+            <div class="header">
+                <img src="img/logo.png" alt="Nerdgoal Logo" width="70">
+                <h2>Esqueci Minha Senha</h2>
+                <p>Recupere o acesso à sua conta</p>
+            </div>
+            <form id="forgotPasswordForm">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Seu email" required>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-warning">Enviar email</button>
+                </div>
+                <div id="successMessage" class="text-success d-none" style="text-align: center; margin-top: 10px;"></div>
+                <hr>
+            </form>
+        </div>
+    </div>
+    <div class="sobre-nos">
+        <br>
+        <h2>Explore o universo geek com os melhores produtos da Nerdgoal!</h2>
+        <p>Na Nerdgoal, somos apaixonados pelo universo geek! Nossa missão é oferecer a melhor seleção de produtos relacionados ao mundo dos jogos, cultura geek, animes e filmes, tanto dos clássicos dos anos 80 e 90 como das novidades atuais.</p>
+        <p>Seja você um fã de Caverna do Dragão, Star Wars, The Legend of Zelda, Sonic the Hedgehog, ou mais recentemente, de franquias como The Last Of Us, Jujutsu Kaisen, e muitos outros, temos algo especial para você. Desde figures detalhadas, pelúcias adoráveis, até réplicas incríveis e itens de coleção.</p>
+        <p>Procurando um presente perfeito? Aqui você encontrará diversas opções criativas para surpreender amigos, família e todos os apaixonados pela cultura nerd. Além disso, garantimos facilidade na compra com a opção de parcelamento em até 12 vezes sem juros e entrega rápida.</p>
+        <p>Nosso objetivo é tornar o universo geek acessível para todos, oferecendo produtos com preços acessíveis. Explore o mundo mágico da Nerdgoal e demonstre seu amor pela cultura geek com nossos produtos exclusivos!</p>
+        <hr>
+        <h3 class="payment-title">Formas de Pagamento</h3>
+        <div class="payment-icons">
+            <i class="fas fa-money-check-alt"></i>
+            <i class="fas fa-barcode"></i>
+            <i class="fas fa-credit-card"></i>
+            <i class="fab fa-paypal"></i>
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-elo"></i>
+        </div>
+    </div>
+      <footer class="footer text-white py-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 d-flex align-items-center">
+                    <img src="img/logo.png" alt="Logo" class="footer-logo" style="width: 12vh;">
+                    <p class="mb-0 ms-3">Nerdgoal SA<br>Piracicaba - SP</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="mb-0" style="margin-top: 2%;">&copy; 2024 Nerdgoal. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-4 text-end footer-icons">
+                    <a href="https://www.instagram.com/nerdgoal" class="text-white me-3" target="_blank">
+                        <img src="img/icon_insta.png" alt="Instagram" class="footer-icon insta-icon">
+                    </a>
+                    <a href="https://wa.me/seuNumeroDeTelefone" class="text-white me-3" target="_blank">
+                        <img src="img/icon_wpp.png" alt="WhatsApp" class="footer-icon wpp-icon">
+                    </a>
+                    <a href="mailto:nerdgoal@gmail.com" class="text-white me-3">
+                        <img src="img/icon_email.png" alt="Email" class="footer-icon email-icon">
+                    </a>
+                    <a href="https://www.facebook.com/seuPerfil" class="text-white" target="_blank">
+                        <img src="img/icon_face.png" alt="Facebook" class="footer-icon face-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('forgotPasswordForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const email = document.getElementById('email').value;
+            if (this.checkValidity()) {
+                const successMessage = document.getElementById('successMessage');
+                successMessage.textContent = `Mensagem enviada para ${email}.`;
+                successMessage.classList.remove('d-none');
+                setTimeout(function() {
+                    successMessage.classList.add('d-none');
+                }, 2000);
+                this.reset();
+            } else {
+                this.reportValidity();
+            }
+        });
+    </script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/inputs.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
