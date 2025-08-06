@@ -35,7 +35,7 @@ Projeto de desenvolvimento de um site institucional para a empresa fictícia Ner
 - Referências do universo dos jogos, animes e filmes antigos, com foco na nostalgia dos usuários
 
 
-#### O que aprendi com esse projeto
+## O que aprendi com esse projeto
 - Estruturação do HTML, CSS e JavaScript
 - Organização de arquivos em repositórios Git.
 - Experiência prática em projetar um site completo
